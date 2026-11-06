@@ -1,0 +1,3 @@
+# Large experiment data are versioned but should not generate enormous textual diffs.
+*.csv -diff
+rl/plan_a/data/predictions*.json -diff

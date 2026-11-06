@@ -1,0 +1,11 @@
+# Pesos devem ser calibrados apenas em treino/validação, nunca no teste final.
+topsis:
+  weights: [0.333333, 0.333333, 0.333334]  # mAP, latência, energia
+energy_aware:
+  accuracy_weight: 1.0
+  base_energy_weight: 0.10
+  energy_pressure_weight: 1.25
+  base_latency_weight: 0.05
+  latency_pressure_weight: 0.50
+dea_bcc:
+  efficiency_threshold: 0.999

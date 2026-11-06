@@ -1,0 +1,55 @@
+matrix:
+  name: raspberry_pi4_six_models_real
+  device: Raspberry Pi 4 Model B Rev 1.2
+  campaign_repetitions: [7, 8, 9]
+  quality_output: f1
+  quality_images: 152
+  quality_iou_threshold: 0.5
+  dea_orientation: input
+  dea_returns_to_scale: variable
+  dea_inputs: [latency_s, gross_energy_j_per_inference]
+  dea_outputs: [f1]
+  energy_scope: measured_inference_loop_gross
+  source: raspberrypi_tests/analysis/pi4_six_models_summary.csv
+  notes:
+    - YOLO thresholds 0.25 are accepted as definitive by project decision.
+    - Gross inference-loop energy is used in the primary matrix.
+    - Incremental energy remains available for sensitivity analysis.
+
+models:
+  ssd_mobilenet_v2:
+    f1: 0.468156
+    latency_s: 0.439720
+    gross_energy_j_per_inference: 1.58069
+    incremental_energy_j_per_inference_estimate: 0.57513
+    score_threshold: 0.325
+  efficientdet_d0:
+    f1: 0.219946
+    latency_s: 1.940537
+    gross_energy_j_per_inference: 5.89346
+    incremental_energy_j_per_inference_estimate: 1.49003
+    score_threshold: 0.06
+  nanodet_plus:
+    f1: 0.754377
+    latency_s: 0.463345
+    gross_energy_j_per_inference: 1.76507
+    incremental_energy_j_per_inference_estimate: 0.67589
+    score_threshold: 0.40
+  yolov5nu:
+    f1: 0.748084
+    latency_s: 0.508224
+    gross_energy_j_per_inference: 1.93517
+    incremental_energy_j_per_inference_estimate: 0.76767
+    score_threshold: 0.25
+  yolov8n:
+    f1: 0.743793
+    latency_s: 0.557123
+    gross_energy_j_per_inference: 2.10726
+    incremental_energy_j_per_inference_estimate: 0.78769
+    score_threshold: 0.25
+  yolo11n:
+    f1: 0.747959
+    latency_s: 0.514984
+    gross_energy_j_per_inference: 1.93883
+    incremental_energy_j_per_inference_estimate: 0.72541
+    score_threshold: 0.25

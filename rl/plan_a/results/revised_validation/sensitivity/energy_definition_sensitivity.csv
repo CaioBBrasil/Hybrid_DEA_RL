@@ -1,0 +1,13 @@
+energy_variant,model,validation_f1,latency_s,energy_j,dea_bcc_score,dea_selected,pareto_selected,pareto_dominators
+gross,ssd_mobilenet_v2,0.48119079837618406,0.43972,1.58069,1.0,True,True,
+gross,efficientdet_d0,0.2388264955305982,1.940537,5.89346,0.26821086424613055,False,False,ssd_mobilenet_v2;nanodet_plus;yolov5nu;yolov8n;yolo11n
+gross,nanodet_plus,0.766269941757407,0.463345,1.76507,1.0,True,True,
+gross,yolov5nu,0.7763059235191203,0.508224,1.93517,1.0,True,True,
+gross,yolov8n,0.759751552795031,0.557123,2.10726,0.8356131261205744,False,False,nanodet_plus;yolov5nu;yolo11n
+gross,yolo11n,0.7634774162214668,0.514984,1.93883,0.9094473906966871,False,False,nanodet_plus;yolov5nu
+idle_subtracted_estimate,ssd_mobilenet_v2,0.48119079837618406,0.43972,0.57513,1.0,True,True,
+idle_subtracted_estimate,efficientdet_d0,0.2388264955305982,1.940537,1.49003,0.3859855170701262,False,False,ssd_mobilenet_v2;nanodet_plus;yolov5nu;yolov8n;yolo11n
+idle_subtracted_estimate,nanodet_plus,0.766269941757407,0.463345,0.67589,1.0,True,True,
+idle_subtracted_estimate,yolov5nu,0.7763059235191203,0.508224,0.76767,1.0,True,True,
+idle_subtracted_estimate,yolov8n,0.759751552795031,0.557123,0.78769,0.8551411131163168,False,False,nanodet_plus;yolov5nu;yolo11n
+idle_subtracted_estimate,yolo11n,0.7634774162214668,0.514984,0.72541,0.9303745383046736,False,False,nanodet_plus

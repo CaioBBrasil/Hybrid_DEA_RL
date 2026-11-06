@@ -1,0 +1,37 @@
+models:
+  ssd_mobilenet_v2:
+    benchmark_map: 0.48119079837618406
+    validation_f1: 0.48119079837618406
+    validation_ap50: 0.3206436041161049
+    latency_s: 0.439720
+    embedded_energy_j: 1.58069
+  efficientdet_d0:
+    benchmark_map: 0.2388264955305982
+    validation_f1: 0.2388264955305982
+    validation_ap50: 0.0917660323479931
+    latency_s: 1.940537
+    embedded_energy_j: 5.89346
+  nanodet_plus:
+    benchmark_map: 0.766269941757407
+    validation_f1: 0.766269941757407
+    validation_ap50: 0.6828724085347238
+    latency_s: 0.463345
+    embedded_energy_j: 1.76507
+  yolov5nu:
+    benchmark_map: 0.7763059235191203
+    validation_f1: 0.7763059235191203
+    validation_ap50: 0.7000977503924681
+    latency_s: 0.508224
+    embedded_energy_j: 1.93517
+  yolov8n:
+    benchmark_map: 0.759751552795031
+    validation_f1: 0.759751552795031
+    validation_ap50: 0.6865831446145226
+    latency_s: 0.557123
+    embedded_energy_j: 2.10726
+  yolo11n:
+    benchmark_map: 0.7634774162214668
+    validation_f1: 0.7634774162214668
+    validation_ap50: 0.7014003024578488
+    latency_s: 0.514984
+    embedded_energy_j: 1.93883

@@ -1,0 +1,14 @@
+{
+  "model": "efficientdet_d0",
+  "format": "tflite",
+  "captured_at": "2026-10-27T13:38:51.467277-03:00",
+  "images": 152,
+  "score_threshold": 0.06,
+  "iou_threshold": 0.5,
+  "true_positives": 204,
+  "false_positives": 662,
+  "false_negatives": 785,
+  "precision": 0.23556581986143188,
+  "recall": 0.20626895854398383,
+  "f1": 0.21994609164420484
+}

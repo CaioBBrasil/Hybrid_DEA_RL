@@ -1,0 +1,64 @@
+dataset:
+  root: dataset_merged
+  cells_per_episode: 152
+models_file: models.raspberry_pi4_validation.yaml
+physical:
+  battery_capacity_j: 277200.0
+  speed_m_s: 10.0
+  movement_power_w: 107.4
+  hover_power_w: 124.9
+  cell_distance_m: 100.0
+  reserve_j: 0.0
+safety:
+  shield_infeasible_actions: true
+  agent_return_action: false
+quality_provider:
+  type: json
+  predictions: rl/plan_a/data/predictions.raspberry_pi4_real.json
+  confidence_threshold:
+    ssd_mobilenet_v2: 0.330
+    efficientdet_d0: 0.055
+    nanodet_plus: 0.395
+    yolov5nu: 0.375
+    yolov8n: 0.240
+    yolo11n: 0.260
+  iou_threshold: 0.50
+selection:
+  quality_split: valid
+  threshold_grid_step: 0.005
+  dea_input_fields: [latency_s, embedded_energy_j]
+  dea_output_field: validation_f1
+  pareto_minimize: [latency_s, embedded_energy_j]
+  pareto_maximize: [validation_f1]
+  test_is_untouched_holdout: false
+reward:
+  alpha_fp: 0.5
+  beta_fn: 1.0
+  quality_clip: 1.0
+  quality_weight: 1.0
+  coverage_weight: 2.0
+  safe_return_reward: 10.0
+  scale_safe_return_by_coverage: true
+  energy_weight: 0.25
+  failure_penalty: 50.0
+  safety_override_penalty: 0.0
+scenarios:
+  rl_all: [ssd_mobilenet_v2, efficientdet_d0, nanodet_plus, yolov5nu, yolov8n, yolo11n]
+  dea_rl: [ssd_mobilenet_v2, nanodet_plus, yolov5nu]
+  pareto_rl: [ssd_mobilenet_v2, nanodet_plus, yolov5nu]
+training:
+  total_timesteps: 1000000
+  learning_rate: 0.00005
+  buffer_size: 50000
+  learning_starts: 1000
+  batch_size: 64
+  gamma: 0.99
+  target_update_interval: 1000
+  eval_frequency: 10000
+  eval_episodes: 30
+  checkpoint_frequency: 50000
+  early_stopping:
+    enabled: true
+    minimum_timesteps: 300000
+    patience_evaluations: 20
+    minimum_reward_improvement: 0.25

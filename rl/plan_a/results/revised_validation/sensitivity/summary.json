@@ -1,0 +1,32 @@
+{
+  "cells_per_episode": 152,
+  "pearson_latency_gross_energy": 0.9991567467351329,
+  "pearson_latency_idle_subtracted_energy": 0.9854416540084371,
+  "selection_sets": {
+    "gross": {
+      "dea_bcc": [
+        "ssd_mobilenet_v2",
+        "nanodet_plus",
+        "yolov5nu"
+      ],
+      "pareto": [
+        "ssd_mobilenet_v2",
+        "nanodet_plus",
+        "yolov5nu"
+      ]
+    },
+    "idle_subtracted_estimate": {
+      "dea_bcc": [
+        "ssd_mobilenet_v2",
+        "nanodet_plus",
+        "yolov5nu"
+      ],
+      "pareto": [
+        "ssd_mobilenet_v2",
+        "nanodet_plus",
+        "yolov5nu"
+      ]
+    }
+  },
+  "interpretation": "The idle-subtracted values are exploratory because the physical campaign did not record long idle windows or real voltage."
+}

@@ -1,0 +1,34 @@
+{
+  "calibration_split": "valid",
+  "iou_threshold": 0.5,
+  "deployment_thresholds": {
+    "ssd_mobilenet_v2": 0.325,
+    "efficientdet_d0": 0.06,
+    "nanodet_plus": 0.4
+  },
+  "converted_artifacts_test_results": {
+    "nanodet_plus": {
+      "precision": 0.7935267857,
+      "recall": 0.7189079879,
+      "f1": 0.7543766578,
+      "conversion_status": "validated"
+    },
+    "ssd_mobilenet_v2": {
+      "precision": 0.5230961298,
+      "recall": 0.4236602629,
+      "f1": 0.4681564246,
+      "conversion_status": "validated after deployment-threshold calibration; quality changed from native"
+    },
+    "efficientdet_d0": {
+      "precision": 0.2355658199,
+      "recall": 0.2062689585,
+      "f1": 0.2199460916,
+      "conversion_status": "validated after deployment-threshold calibration; degraded baseline only"
+    }
+  },
+  "native_coco_map_50_95": {
+    "nanodet_plus": 0.3907749148,
+    "ssd_mobilenet_v2": 0.3395228088,
+    "efficientdet_d0": 0.0824573040
+  }
+}

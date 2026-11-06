@@ -1,0 +1,36 @@
+{
+  "model": "yolov5nu",
+  "format": "onnx",
+  "artifact": "models/YOLOv5nu.onnx",
+  "captured_at": "2026-10-30T09:50:29.707176-03:00",
+  "threads": 4,
+  "warmup_runs": 1,
+  "measured_runs": 3,
+  "input_size": [
+    640,
+    640
+  ],
+  "batch_size": 1,
+  "timing_scope": "runtime inference and output materialization",
+  "latency_ms": {
+    "mean": 471.2007263333333,
+    "median": 471.029456,
+    "stdev": 1.837706043174556,
+    "min": 469.454651,
+    "max": 473.118072,
+    "p95": 472.9092104,
+    "p99": 473.07629968
+  },
+  "throughput_fps": 2.1221797676623964,
+  "raw_latency_ms": [
+    469.454651,
+    473.118072,
+    471.029456
+  ],
+  "max_process_rss_kb": 842240,
+  "temperature_before": "temp=46.2'C",
+  "temperature_after": "temp=50.6'C",
+  "throttled_before": "throttled=0x0",
+  "throttled_after": "throttled=0x0",
+  "repeat": 10
+}

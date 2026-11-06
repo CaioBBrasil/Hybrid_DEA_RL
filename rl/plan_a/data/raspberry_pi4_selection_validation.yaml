@@ -1,0 +1,75 @@
+matrix:
+  name: raspberry_pi4_selection_validation
+  selection_split: valid
+  final_evaluation_split: test
+  quality_output: f1
+  quality_iou_threshold: 0.5
+  threshold_calibration: maximize_validation_f1
+  threshold_grid_step: 0.005
+  dea_orientation: input
+  dea_returns_to_scale: variable
+  dea_inputs:
+  - latency_s
+  - embedded_energy_j
+  dea_outputs:
+  - validation_f1
+  dea_efficiency_threshold: 0.999
+  dea_selected:
+  - ssd_mobilenet_v2
+  - nanodet_plus
+  - yolov5nu
+  pareto_selected:
+  - ssd_mobilenet_v2
+  - nanodet_plus
+  - yolov5nu
+  test_independence_warning: The existing test split was consulted during prior development
+    and is not an untouched holdout.
+models:
+  ssd_mobilenet_v2:
+    benchmark_map: 0.48119079837618406
+    validation_f1: 0.48119079837618406
+    validation_ap50: 0.3206436041161049
+    latency_s: 0.43972
+    embedded_energy_j: 1.58069
+    incremental_energy_j: 1.58069
+    score_threshold: 0.33
+  efficientdet_d0:
+    benchmark_map: 0.2388264955305982
+    validation_f1: 0.2388264955305982
+    validation_ap50: 0.0917660323479931
+    latency_s: 1.940537
+    embedded_energy_j: 5.89346
+    incremental_energy_j: 5.89346
+    score_threshold: 0.055
+  nanodet_plus:
+    benchmark_map: 0.766269941757407
+    validation_f1: 0.766269941757407
+    validation_ap50: 0.6828724085347238
+    latency_s: 0.463345
+    embedded_energy_j: 1.76507
+    incremental_energy_j: 1.76507
+    score_threshold: 0.395
+  yolov5nu:
+    benchmark_map: 0.7763059235191203
+    validation_f1: 0.7763059235191203
+    validation_ap50: 0.7000977503924681
+    latency_s: 0.508224
+    embedded_energy_j: 1.93517
+    incremental_energy_j: 1.93517
+    score_threshold: 0.375
+  yolov8n:
+    benchmark_map: 0.759751552795031
+    validation_f1: 0.759751552795031
+    validation_ap50: 0.6865831446145226
+    latency_s: 0.557123
+    embedded_energy_j: 2.10726
+    incremental_energy_j: 2.10726
+    score_threshold: 0.24
+  yolo11n:
+    benchmark_map: 0.7634774162214668
+    validation_f1: 0.7634774162214668
+    validation_ap50: 0.7014003024578488
+    latency_s: 0.514984
+    embedded_energy_j: 1.93883
+    incremental_energy_j: 1.93883
+    score_threshold: 0.26

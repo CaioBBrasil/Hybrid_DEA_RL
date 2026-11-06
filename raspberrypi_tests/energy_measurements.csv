@@ -1,0 +1,2 @@
+model,format,repetition,meter,threads,idle_power_w,total_energy_j,duration_s,inferences,temperature_start_c,temperature_end_c,throttled_before,throttled_after,notes
+

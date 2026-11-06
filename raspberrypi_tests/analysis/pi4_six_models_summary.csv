@@ -1,0 +1,8 @@
+model,repetitions,latency_mean_ms,latency_sd_ms,fps_mean,fps_sd,gross_energy_j_per_inference,gross_energy_mwh_per_inference,incremental_energy_j_per_inference_estimate,incremental_energy_mwh_per_inference_estimate,full_process_energy_j,peak_rss_mb,peak_temperature_c,quality_images,iou_threshold,score_threshold,precision,recall,f1,threshold_status
+ssd_mobilenet_v2,3,439.720,1.940,2.27417,0.01000,1.58069,0.43908,0.57513,0.15976,279.647,904.7,60.4,152,0.5,0.325,0.523096,0.423660,0.468156,calibrated_on_validation
+efficientdet_d0,3,1940.537,4.640,0.51532,0.00123,5.89346,1.63707,1.49003,0.41390,796.483,980.1,55.5,152,0.5,0.06,0.235566,0.206269,0.219946,calibrated_on_validation
+nanodet_plus,3,463.345,0.061,2.15817,0.00029,1.76507,0.49030,0.67589,0.18775,311.090,879.1,60.9,152,0.5,0.4,0.793527,0.718908,0.754377,calibrated_on_validation
+yolov5nu,3,508.224,5.280,1.96774,0.02060,1.93517,0.53755,0.76767,0.21324,316.106,863.2,60.9,152,0.5,0.25,0.710646,0.789687,0.748084,provisional_not_calibrated
+yolov8n,3,557.123,3.260,1.79495,0.01050,2.10726,0.58535,0.78769,0.21880,337.628,886.9,61.3,152,0.5,0.25,0.778761,0.711830,0.743793,provisional_not_calibrated
+yolo11n,3,514.984,1.440,1.94178,0.00544,1.93883,0.53856,0.72541,0.20150,316.081,897.7,61.3,152,0.5,0.25,0.754892,0.741153,0.747959,provisional_not_calibrated
+

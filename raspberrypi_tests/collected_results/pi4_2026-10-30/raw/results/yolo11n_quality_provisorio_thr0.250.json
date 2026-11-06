@@ -1,0 +1,15 @@
+{
+  "model": "yolo11n",
+  "format": "onnx",
+  "captured_at": "2026-10-30T14:50:08.485004-03:00",
+  "images": 152,
+  "score_threshold": 0.25,
+  "iou_threshold": 0.5,
+  "true_positives": 733,
+  "false_positives": 238,
+  "false_negatives": 256,
+  "precision": 0.7548918640576725,
+  "recall": 0.7411526794742164,
+  "f1": 0.7479591836734695,
+  "threshold_status": "provisorio_nao_calibrado_em_validacao"
+}

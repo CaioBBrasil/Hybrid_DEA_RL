@@ -1,0 +1,79 @@
+{
+  "models": [
+    {
+      "name": "ssd_mobilenet_v2",
+      "format": "tflite",
+      "path": "models/ssd_mobilenet_v2_fp32.tflite",
+      "sha256": "8730bd0a196f68ad75c21a724406371c54fe49aba2251fba46aed8ff671b1056",
+      "input_size": [
+        640,
+        640
+      ],
+      "class_names": [
+        "acai"
+      ],
+      "score_threshold": 0.325
+    },
+    {
+      "name": "efficientdet_d0",
+      "format": "tflite",
+      "path": "models/efficientdet_d0_fp32.tflite",
+      "sha256": "e8e2be471dfe379ca4899c21c51bbf455ee7224323850ea52160cbd652eb31fd",
+      "input_size": [
+        640,
+        640
+      ],
+      "class_names": [
+        "acai"
+      ],
+      "score_threshold": 0.06
+    },
+    {
+      "name": "nanodet_plus",
+      "format": "onnx",
+      "path": "models/nanodet_plus.onnx",
+      "sha256": "92c171986d4b5594b3815ba1da01efa865b318bab8b6e35d49d1d48d604f9239",
+      "input_size": [
+        640,
+        640
+      ],
+      "class_names": [
+        "acai"
+      ],
+      "score_threshold": 0.4
+    },
+    {
+      "name": "yolov5nu",
+      "format": "onnx",
+      "path": "models/YOLOv5nu.onnx",
+      "sha256": "70fe5fbdddfd38f6037fb5818be874a0c47326989998a00a94a5c8c2cd49e6bb",
+      "input_size": [
+        640,
+        640
+      ]
+    },
+    {
+      "name": "yolov8n",
+      "format": "onnx",
+      "path": "models/YOLOv8n.onnx",
+      "sha256": "6451144ad3d6fa41237cb682186c5c0e2b963b400c2e65ba32ccfce2d6624ea5",
+      "input_size": [
+        640,
+        640
+      ]
+    },
+    {
+      "name": "yolo11n",
+      "format": "onnx",
+      "path": "models/YOLO11n.onnx",
+      "sha256": "5d52b6f6a366b80eb62082fc2fe851544a911a7f11c775802ba50f4ab7111187",
+      "input_size": [
+        640,
+        640
+      ]
+    }
+  ],
+  "test_images": 152,
+  "score_thresholds": "per-model",
+  "iou_threshold": 0.5
+}

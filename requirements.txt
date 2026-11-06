@@ -1,0 +1,47 @@
+# Ambiente unificado para SSD-MobileNetV2, EfficientDet-D0 e NanoDet-Plus.
+# Plataforma alvo: Linux x86_64 com GPU NVIDIA e Python 3.10.
+#
+# Os repositórios tensorflow/models e RangiLyu/nanodet também precisam ser
+# clonados conforme treino/README.md; este arquivo instala as dependências.
+
+# Base comum
+setuptools==80.9.0
+grpcio-tools==1.59.3
+numpy==1.23.5
+Pillow==10.2.0
+PyYAML==6.0.1
+matplotlib==3.7.5
+pandas==2.0.3
+scipy==1.10.1
+Cython==3.0.10
+pycocotools==2.0.7
+tqdm==4.66.4
+tensorboard==2.15.2
+
+# SSD-MobileNetV2 e EfficientDet-D0: TensorFlow Object Detection API
+tensorflow[and-cuda]==2.15.1
+tf-models-official==2.15.0
+tensorflow-io==0.36.0
+tf-slim==1.1.0
+contextlib2==21.6.0
+lxml==5.2.1
+avro-python3==1.10.2
+apache-beam==2.56.0
+lvis==0.5.3
+six==1.16.0
+pyparsing==2.4.7
+sacrebleu==2.2.0
+
+# NanoDet-Plus v1.0.0 (implementação oficial baseada em PyTorch 1.x)
+torch==1.13.1
+torchvision==0.14.1
+pytorch-lightning==1.9.5
+torchmetrics==0.11.4
+omegaconf==2.3.0
+opencv-python-headless==4.8.1.78
+onnx==1.14.1
+onnx-simplifier==0.4.36
+pyaml==23.12.0
+tabulate==0.9.0
+termcolor==2.4.0
+
